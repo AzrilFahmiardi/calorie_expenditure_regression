@@ -10,5 +10,22 @@ subsample: 0.9494258651834557
 colsample_bytree: 0.6332097368693999
 min_child_weight: 6
 gamma: 0.3841072597639574
+
+params = {
+        'tree_method': 'hist',
+        'objective': 'reg:squarederror',
+        'random_state': 42,
+        'verbosity': 0,
+        'n_jobs': -1,
+        'n_estimators': 1000,
+        'learning_rate': trial.suggest_float('learning_rate', 0.001, 0.01),
+        'max_depth': trial.suggest_int('max_depth', 5, 10),
+        'reg_lambda': trial.suggest_float('reg_lambda', 0.5, 2),
+        'reg_alpha': trial.suggest_float('reg_alpha', 0.5, 2),
+        'subsample': trial.suggest_float('subsample', 0.1, 1),
+        'colsample_bytree': trial.suggest_float('colsample_bytree', 0.1, 1),
+        'min_child_weight': trial.suggest_int('min_child_weight', 5, 10),
+        'gamma': trial.suggest_float('gamma', 0.1, 0.5),
+}
 ==================================================
 

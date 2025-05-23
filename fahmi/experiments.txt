@@ -1,0 +1,71 @@
+1. remove_outliers_by_zscore
+Hilangkan data yang memiliki z-score lebih dari 3.
+
+2. clip_target_values
+Potong nilai target di atas/bawah persentil tertentu (misal: [1%, 99%]).
+
+3. impute_missing_values
+Imputasi nilai kosong pakai mean, median, atau KNN Imputer.
+
+4. scale_features
+Standardisasi atau normalisasi fitur (StandardScaler / MinMaxScaler).
+
+5. log_transform_skewed_features
+Transformasi fitur numerik yang skewed menjadi lebih normal dengan log1p.
+
+6. remove_low_variance_features
+Buang fitur yang hampir tidak berubah (varians rendah).
+
+7. create_polynomial_features
+Tambahkan fitur kuadrat, pangkat tiga, dll.
+
+8. create_interaction_features
+Fitur hasil dari kombinasi 2 fitur, misalnya: X1 * X2, X1 + X2.
+
+9. create_binned_features
+Buat kategori dari fitur numerik (binning).
+
+10. create_target_encoded_features
+Target encoding pada fitur kategori (pakai rata-rata target).
+
+11. create_statistical_group_features
+Buat fitur seperti: rata-rata target per kota, total jumlah per kategori, dll.
+
+12. create_date_features
+Kalau ada fitur waktu, pecah jadi: year, month, dayofweek, dll.
+
+13. create_rank_features
+Fitur berupa ranking dari nilai fitur lain.
+
+14. create_pca_features
+Fitur hasil Principal Component Analysis (PCA).
+
+15. cluster_features
+Gunakan clustering (KMeans, DBSCAN) untuk membuat label cluster sebagai fitur.
+
+16. select_features_by_importance
+Pilih fitur berdasarkan importance dari model (misal: RandomForest).
+
+17. recursive_feature_elimination
+Gunakan RFE dari sklearn untuk seleksi otomatis fitur.
+
+18. select_features_by_correlation
+Buang fitur yang terlalu berkorelasi satu sama lain (collinearity).
+
+19. evaluate_with_log_transform
+Transformasi target y menggunakan np.log1p().
+
+20. evaluate_with_boxcox
+Gunakan transformasi Box-Cox pada target.
+
+21. evaluate_with_quantile_transform
+Gunakan quantile transform (map target ke distribusi normal).
+
+22. rmsle_cv_standard
+5-fold cross-validation biasa.
+
+23. rmsle_cv_stratified
+Stratifikasi berdasarkan quantile target.
+
+24. rmsle_cv_grouped
+Jika ada fitur seperti "user_id", validasi dipisahkan berdasarkan grup.
