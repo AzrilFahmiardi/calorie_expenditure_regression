@@ -1,10 +1,10 @@
 1. remove_outliers_by_zscore
 Hilangkan data yang memiliki z-score lebih dari 3.
 
-2. clip_target_values
+2. clip_target_values (Tidak berpengaruh secara signifikan)
 Potong nilai target di atas/bawah persentil tertentu (misal: [1%, 99%]).
 
-3. impute_missing_values
+3. impute_missing_values (Tidak berpengaruh)
 Imputasi nilai kosong pakai mean, median, atau KNN Imputer.
 
 4. scale_features
